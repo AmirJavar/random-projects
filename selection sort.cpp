@@ -42,7 +42,7 @@ void input(int list[], int n)
         cin >> list[i];
     }
 }
-void selectionSort(int *list,int n, bool (*compare) (int, int))
+void selectionSort(int list[], int n, bool (*compare) (int, int))
 {
     int sol;
     for (int i=0 ; i<n-1 ; i++)
