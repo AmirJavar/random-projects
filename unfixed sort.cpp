@@ -35,7 +35,7 @@ int main()
 		cout << "Entered choice is not valid.";
 
 	outputArr(arrStuNames, stuSize);
-	delete arrStuNames;
+	delete[] arrStuNames;
 }
 void selectionSort(string arrStuNames[], int stuSize, bool (*compare) (string, string))
 {
