@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-void bubbleSort(vector<string>& words);
+void bubbleSort(vector<string>&);
 int main()
 {
     cout << "Enter a word and press enter. When you are done adding words, type 'Done' and press enter." << endl;
@@ -11,12 +11,12 @@ int main()
     vector<string> words;
     string lastword;
 
-    while (cin >> lastword && lastword != "Done")
+    while (lastword != "Done")
     {
+        cin >> lastword
         words.push_back(lastword);
     }
 
-    // Sorting using the custom sorting algorithm
     bubbleSort(words);
 
     int counter = 0;
@@ -28,10 +28,7 @@ int main()
             break;
     }
 
-
     cout << "Longest prefix is: \"" << words[0].substr(0, counter) << "\"" << endl;
-
-    return 0;
 }
 
 void bubbleSort(vector<string>& words)
